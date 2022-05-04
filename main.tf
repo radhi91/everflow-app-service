@@ -27,7 +27,7 @@ resource "azurerm_linux_web_app" "simpleappser" {
   location            = azurerm_resource_group.simpleapp.location
   resource_group_name = azurerm_resource_group.simpleapp.name
   service_plan_id = azurerm_service_plan.simpleappplan.id
-
+  https_only = true
   site_config {}
 
   app_settings = {
